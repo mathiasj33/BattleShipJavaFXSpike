@@ -1,16 +1,16 @@
-package de.letorat.battleship.spikes.javafx;
+package net.softwarepage.battleship.spikes.javafx;
 	
+import net.softwarepage.battleship.code.model.Alignment;
+import net.softwarepage.battleship.code.model.Game;
+import net.softwarepage.battleship.code.model.Model;
+import net.softwarepage.battleship.code.model.Player;
+import net.softwarepage.battleship.code.model.Playingfield;
+import net.softwarepage.battleship.code.model.Pos;
+import net.softwarepage.battleship.code.model.Ship;
+import net.softwarepage.battleship.code.views.PlayingfieldView;
 import javafx.application.Application;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
-import de.letorat.battleship.code.model.Alignment;
-import de.letorat.battleship.code.model.Game;
-import de.letorat.battleship.code.model.Model;
-import de.letorat.battleship.code.model.Player;
-import de.letorat.battleship.code.model.Playingfield;
-import de.letorat.battleship.code.model.Pos;
-import de.letorat.battleship.code.model.Ship;
-import de.letorat.battleship.code.views.PlayingfieldView;
 
 
 public class PlayingfieldFieldSpike extends Application {

@@ -1,17 +1,17 @@
-package de.letorat.battleship.spikes.javafx;
+package net.softwarepage.battleship.spikes.javafx;
 
+import net.softwarepage.battleship.code.model.Alignment;
+import net.softwarepage.battleship.code.model.Game;
+import net.softwarepage.battleship.code.model.Model;
+import net.softwarepage.battleship.code.model.Player;
+import net.softwarepage.battleship.code.model.Playingfield;
+import net.softwarepage.battleship.code.model.Pos;
+import net.softwarepage.battleship.code.model.Ship;
+import net.softwarepage.battleship.code.model.ShipSelection;
+import net.softwarepage.battleship.code.views.GameView;
 import javafx.application.Application;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
-import de.letorat.battleship.code.model.Alignment;
-import de.letorat.battleship.code.model.Game;
-import de.letorat.battleship.code.model.Model;
-import de.letorat.battleship.code.model.Player;
-import de.letorat.battleship.code.model.Playingfield;
-import de.letorat.battleship.code.model.Pos;
-import de.letorat.battleship.code.model.Ship;
-import de.letorat.battleship.code.model.ShipSelection;
-import de.letorat.battleship.code.views.GameView;
 
 
 public class GameViewSpike extends Application {
@@ -23,10 +23,10 @@ public class GameViewSpike extends Application {
 			Game game = new Game(pF, new Player("p1", 3), new Player("p2", 3));
 			model.setGame(game);
 			ShipSelection sel = new ShipSelection(Alignment.Horizontal);
-			sel.addShips(1, new Ship(5, Alignment.Horizontal));
-			sel.addShips(2, new Ship(4, Alignment.Horizontal));
-			sel.addShips(3, new Ship(3,Alignment.Horizontal));
-			sel.addShips(4, new Ship(2, Alignment.Horizontal));
+			sel.addShips(new Ship(5, Alignment.Horizontal), 2);
+			sel.addShips(new Ship(4, Alignment.Horizontal), 2);
+			sel.addShips(new Ship(3,Alignment.Horizontal), 3);
+			sel.addShips(new Ship(2, Alignment.Horizontal), 4);
 			model.setShipSelection(sel);
 			GameView root = new GameView(model);
 			model.addView(root);
